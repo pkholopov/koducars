@@ -5,9 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const sunIcon = toggleBtn?.querySelector(".theme-icon-sun");
     const moonIcon = toggleBtn?.querySelector(".theme-icon-moon");
 
-    // Применяем сохранённую тему
+    // Применяем сохранённую тему; по умолчанию — тёмная
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
+    if (savedTheme === "light") {
+        html.removeAttribute("data-theme");
+        if (sunIcon) sunIcon.style.display = "block";
+        if (moonIcon) moonIcon.style.display = "none";
+    } else {
         html.setAttribute("data-theme", "dark");
         if (sunIcon) sunIcon.style.display = "none";
         if (moonIcon) moonIcon.style.display = "block";
