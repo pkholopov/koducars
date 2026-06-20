@@ -35,6 +35,16 @@
     --marquee-mask-dark: var(--bg-main);
 }
 
+/* Иконки флагов стран */
+.flag-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -456,6 +466,10 @@ nav a:hover {
     gap: 12px;
 }
 
+.country-btn .flag-icon {
+    margin-right: 8px;
+}
+
 .country-btn, .engine-btn {
     background-color: transparent;
     border: 1px solid var(--border-line);
@@ -750,6 +764,9 @@ nav a:hover {
 
 .review-card .card-meta {
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .review-card h3 {
