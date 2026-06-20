@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoImport Pro | Премиальный импорт автомобилей</title>
+    <!-- Премиальные шрифты -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Space+Grotesk:wght@300;500&family=Unbounded:wght@300;500;700&family=Inter:wght@200;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="logo.jpeg" alt="KODU Cars" class="logo-img">KODU<span>Cars</span></div>
+        <nav>
+            <a href="#services">Направления</a>
+            <a href="#calc">Калькулятор</a>
+            <a href="#faq">FAQ</a>
+            <a href="#reviews">Кейсы</a>
+        </nav>
+        <div style="display: flex; align-items: center;">
+            <button class="btn-cta">Оставить заявку</button>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                <!-- Иконка солнца (светлая тема) -->
+                <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+                <!-- Иконка луны (тёмная тема) -->
+                <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Раздел Hero (Максимум воздуха) -->
+        <section class="hero">
+            <video autoplay muted loop playsinline class="hero-video-bg">
+                <source src="back.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+              <div>
+                <div class="hero-tag">ПРЕМИАЛЬНЫЙ АВТОПОДБОР</div>
+                <h1>Надежный импорт авто с гарантией<br><span class="dynamic-txt">сроков</span></h1>
+                <p>Прямой импорт без дилерских наценок и ограничений. Полный цикл: от закрытых аукционов до выдачи ключей в РФ с юридической гарантией.</p>
+                <div class="hero-actions">
+                    <button class="btn-cta btn-large">Подобрать автомобиль</button>
+                    <a href="#services" class="btn-secondary">Смотреть географию</a>
+                </div>
+              </div>
+
+                <!-- Блок интерактивного рентген-сканера -->
+                <!-- <div class="xray-container" id="xray-box">
+                    <div class="xray-layer xray-base">
+                        <img src="up.png">
+                    </div>
+                    <div class="xray-layer xray-overlay" id="xray-lens">
+                        <img src="down.png">
+                    </div>
+                    <div class="xray-cursor-follower" id="xray-dot"></div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Раздел услуг / Минималистичная сетка -->
+        <section class="bento-section" id="services">
+            <div class="section-header">
+                <h2 class="section-title">Прямая логистика</h2>
+                <p class="section-subtitle">Официальный выкуп, страхование и доставка из ключевых автомобильных регионов мира.</p>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="bento-card card-wide">
+                    <div class="card-meta"><span>01</span> / КИТАЙ</div>
+                    <h3>Электромобили и инновационные гибриды</h3>
+                    <p>Прямые поставки премиальных брендов Zeekr, Lixiang, BYD и Avatr без посредников. Заводская сборка для внутреннего рынка.</p>
+                    <span class="tag">Срок доставки от 18 дней</span>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-meta"><span>02</span> / ЯПОНИЯ</div>
+                    <h3>Строгие аукционы</h3>
+                    <p>Легендарный правый руль, кристально чистая история лотов и экспертный аукционный контроль.</p>
+                    <span class="tag">Честный пробег</span>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-meta"><span>03</span> / ЮЖНАЯ КОРЕЯ</div>
+                    <h3>Премиальный сегмент</h3>
+                    <p>Европейский левый руль, максимальные комплектации и идеальное состояние кузова.</p>
+                    <span class="tag">Заводской левый руль</span>
+                </div>
+
+                <div class="bento-card card-wide">
+                    <div class="card-meta"><span>04</span> / ОАЭ & США</div>
+                    <h3>Эксклюзивные суперкары и мускулкары</h3>
+                    <p>Поиск редких комплектаций внедорожников в Дубае без зимней эксплуатации, а также выкуп автомобилей со страховых площадок Америки.</p>
+                    <span class="tag">Выгода до 50%</span>
+                </div>
+            </div>
+        </section>
+
+                <!-- Раздел Калькулятора -->
+        <section class="calculator-section" id="calc">
+            <div class="section-header">
+                <h2 class="section-title">Рассчитать стоимость</h2>
+                <p class="section-subtitle">Ориентировочный расчет затрат на выкуп, доставку и таможенное оформление автомобиля в РФ.</p>
+            </div>
+
+            <div class="calc-container">
+                <!-- Левая часть: Ввод параметров -->
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label class="input-label">01 / Выберите регион отправления</label>
+                        <div class="country-selector">
+                            <button class="country-btn active" data-country="cn" data-rate="13.2" data-delivery="250000">🇨🇳 Китай</button>
+                            <button class="country-btn" data-country="jp" data-rate="0.62" data-delivery="180000">🇯🇵 Япония</button>
+                            <button class="country-btn" data-country="kr" data-rate="0.071" data-delivery="200000">🇰🇷 Корея</button>
+                            <button class="country-btn" data-country="ae" data-rate="25.4" data-delivery="350000">🇦🇪 ОАЭ</button>
+                            <button class="country-btn" data-country="us" data-rate="93.1" data-delivery="400000">🇺🇸 США</button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label" id="price-label">02 / Стоимость авто в Китае (Юани, ¥)</label>
+                        <input type="number" class="calc-range-input" id="car-price" value="200000" min="1000" max="10000000">
+                        <input type="range" class="calc-slider" id="price-slider" min="50000" max="800000" step="5000" value="200000">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">03 / Тип силовой установки</label>
+                        <div class="engine-selector">
+                            <button class="engine-btn active" data-tax="0.15">Электро / Гибрид</button>
+                            <button class="engine-btn" data-tax="0.25">Бензин / Дизель</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая часть: Результаты (Спецификация премиум-чека) -->
+                <div class="calc-results">
+                    <div class="results-header">Итоговый расчет под ключ</div>
+                    
+                    <div class="result-line">
+                        <span>Цена автомобиля в РФ</span>
+                        <span id="res-pure-price">0 ₽</span>
+                    </div>
+                    <div class="result-line">
+                        <span>Таможенные пошлины и СБКТС</span>
+                        <span id="res-tax">0 ₽</span>
+                    </div>
+                    <div class="result-line">
+                        <span>Логистика и фрахт</span>
+                        <span id="res-delivery">0 ₽</span>
+                    </div>
+                    <div class="result-line">
+                        <span>Комиссия KODU Cars</span>
+                        <span>120 000 ₽</span>
+                    </div>
+
+                    <div class="result-total">
+                        <span>Итого под ключ:</span>
+                        <span id="res-total">0 ₽</span>
+                    </div>
+
+                    <button class="btn-cta btn-large" style="width: 100%; margin-top: 20px;">Зафиксировать стоимость</button>
+                </div>
+            </div>
+        </section>
+
+                <!-- Раздел FAQ -->
+        <section class="faq-section" id="faq">
+            <div class="section-header">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <p class="section-subtitle">Прозрачность на каждом этапе. Ответы на главные вопросы о юридических гарантиях, оплате и доставке.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Какие юридические гарантии я получаю при оформлении заказа?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-panel">
+                        <div class="faq-content">
+                            Мы заключаем официальный договор купли-продажи и агентский договор с юридическим лицом в РФ. В документах фиксируется итоговая стоимость автомобиля, технические характеристики и сроки доставки. Каждый автомобиль подлежит 100% страхованию на всех этапах транспортировки — от выкупа до выдачи.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Как разделена оплата и возможна ли покупка без полной предоплаты?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-panel">
+                        <div class="faq-content">
+                            Оплата разбита на три прозрачных этапа. Сначала вы оплачиваете инвойс непосредственно в страну выкупа автомобиля. Второй этап — оплата таможенной пошлины и утилизационного сбора по прибытии машины в РФ. Финальный этап (наша комиссия) оплачивается строго в момент передачи автомобиля вам в руки.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Можно ли сейчас привезти премиальный автомобиль, находящийся под санкциями?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-panel">
+                        <div class="faq-content">
+                            Да. У нас полностью отлажены логистические цепочки через дружественные транзитные страны. Это позволяет абсолютно легально импортировать любые санкционные автомобили (включая объемы двигателей свыше 1.9 литра из Японии и Южной Кореи, а также люксовый сегмент из США и Европы) без риска задержки на таможне.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Как проверяется техническое состояние машины перед покупкой?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-panel">
+                        <div class="faq-content">
+                            В Южной Корее, Китае и ОАЭ наши штатные эксперты проводят полную выездную диагностику: замер лакокрасочного покрытия, компьютерное чтение блоков на оригинальный пробег, осмотр эндоскопом и тест-драйв. Вы получаете подробный отчет (более 100 фото и видео высокого разрешения). В Японии мы работаем строго через сертифицированные инспекции строгих внутренних аукционов.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Раздел Отзывов (Marquee) -->
+        <section class="reviews-section" id="reviews">
+            <div class="section-header">
+                <h2 class="section-title">Выполненные кейсы</h2>
+                <p class="section-subtitle">Реальные автомобили, доставленные нашим клиентам. Честные цифры, сроки и финальная выгода.</p>
+            </div>
+
+            <!-- Контейнер бесконечной ленты -->
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    
+                    <!-- Карточка 1 -->
+                    <div class="review-card">
+                        <div class="card-meta">🇨🇳 ИМПОРТ ИЗ КИТАЯ</div>
+                        <h3>Zeekr 001 YOU</h3>
+                        <p class="review-text">«Доставили в Москву ровно за 19 дней. Состояние идеальное, машина была в заводских пленках. Сэкономил около 1.4 млн рублей по сравнению с предложениями в наличии у московских дилеров». — Никита К.</p>
+                        <div class="review-footer">
+                            <span class="review-price">5 650 000 ₽</span>
+                            <span class="review-days">19 дней</span>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 2 -->
+                    <div class="review-card">
+                        <div class="card-meta">🇯🇵 ИМПОРТ ИЗ ЯПОНИИ</div>
+                        <h3>Toyota RAV4 (IV)</h3>
+                        <p class="review-text">«Искал строго правый руль и оценку не ниже 4.5B на аукционе. Ребята нашли идеальный лот в Нагое с пробегом 14 тыс. км. Полное сопровождение на таможне во Владивостоке». — Артур М.</p>
+                        <div class="review-footer">
+                            <span class="review-price">2 480 000 ₽</span>
+                            <span class="review-days">24 дня</span>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 3 -->
+                    <div class="review-card">
+                        <div class="card-meta">🇰🇷 ИМПОРТ ИЗ КОРЕИ</div>
+                        <h3>BMW X5 M-Sport</h3>
+                        <p class="review-text">«Важен был заводской левый руль и чистая история без окрасов. Проверка эксперта компании в Сеуле была очень дотошной, прислали видео каждого скола. Машиной безумно доволен». — Владислав</p>
+                        <div class="review-footer">
+                            <span class="review-price">7 900 000 ₽</span>
+                            <span class="review-days">21 день</span>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 4 -->
+                    <div class="review-card">
+                        <div class="card-meta">🇦🇪 ИМПОРТ ИЗ ОАЭ</div>
+                        <h3>Nissan Patrol V8</h3>
+                        <p class="review-text">«Чистокровный внедорожник без зимней эксплуатации, состояние нового авто из салона в Дубае. Оплачивал инвойс напрямую через банк, никаких скрытых комиссий». — Сергей Ю.</p>
+                        <div class="review-footer">
+                            <span class="review-price">6 100 000 ₽</span>
+                            <span class="review-days">28 дней</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+                <!-- Раздел Контактов и Футер -->
+        <section class="footer-section" id="contacts">
+            <div class="footer-container">
+                
+                <!-- Левая колонка: Форма захвата -->
+                <div class="footer-cta-block">
+                    <div class="footer-tag">ПЕРВЫЙ ШАГ</div>
+                    <h2 class="footer-title">Давайте начнём сегодня</h2>
+                    <p class="footer-text">Оставьте ваш Telegram или номер телефона. Мы пришлем актуальный срез цен по выбранной модели и рассчитаем варианты доставки.</p>
+                    
+                    <form class="footer-form" onsubmit="event.preventDefault();">
+                        <input type="text" class="footer-input" placeholder="Telegram @username или телефон" required>
+                        <button type="submit" class="btn-cta btn-large">Получить расчет</button>
+                    </form>
+                </div>
+
+                <!-- Правая колонка: Информационные блоки -->
+                <div class="footer-info-grid">
+                    <div class="info-column">
+                        <h4>Контакты</h4>
+                        <p><a href="tel:+74950008822" class="info-link">+7 (495) 000-88-22</a></p>
+                        <p><a href="mailto:info@autoimport.pro" class="info-link">info@autoimport.pro</a></p>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Офис в РФ</h4>
+                        <p class="static-text">Владивосток,<br>Примерная ул. 123</p>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Мессенджеры</h4>
+                        <div class="social-links">
+                            <a href="#" class="magnetic-link">Telegram</a>
+                            <a href="#" class="magnetic-link">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Самый нижний блок с копирайтом -->
+            <div class="footer-bottom">
+                <div class="logo"><img src="logo.jpeg" alt="KODU Cars" class="logo-img">KODU<span>Cars</span></div>
+                <div class="copyright-text">
+                    <span>© 2026 ООО «KODUCars». Все права защищены.</span>
+                    <span>ИНН 2503456789 / ОГРН 1237700456789</span>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
